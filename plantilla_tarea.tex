@@ -1,0 +1,139 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Una plantilla para elaborar trabajo y tareas en Markdown
+%%% Luis O. Ramírez Fernández < lramirez88mx@comunidad.unam.mx>
+%%% La vesión más reciente en https://github.com/opengraphix/plantilla_tareas_LATEX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[letterpaper, 12pt, spanish]{article}
+%Paquetes
+\usepackage{helvet} %% Fuente Helvetica
+\usepackage{cite} %Referenciar citas en biblitex
+\usepackage{apacite}
+\usepackage{hyperref}
+%% Esto es para poder escribir acentos directamente:
+\usepackage[utf8]{inputenc}
+%\usepackage{enumerate}
+%% Esto es para que LaTeX sepa que el texto está en español
+\usepackage[spanish,activeacute]{babel}
+%% Citas
+\usepackage{upquote}
+\usepackage{microtype}
+% Tablas
+\usepackage{longtable,booktabs}
+\usepackage{grffile}
+%% Para matemáticas
+\usepackage{amsmath, amssymb, mathtools}
+%% Parametros para margenes del documento
+\usepackage[right=3cm,left=3cm,top=3cm,bottom=3cm,headsep=0cm,footskip=1cm]{geometry}
+\setlength{\parskip}{\baselineskip} %Espaciado entre cada párrafo
+\renewcommand{\baselinestretch}{1.5} %Espaciado de línea 1.5 puntos
+\usepackage[T1]{fontenc}
+
+$if(numbersections)$
+$else$
+\setcounter{secnumdepth}{3}
+$endif$
+
+$if(verbatim-in-note)$
+\VerbatimFootnotes % Notas de pie
+$endif$
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+$if(title)$
+\title{$title$}
+$endif$
+
+$if(author)$
+\author{$for(author)$$author$$sep$ \and $endfor$}
+$endif$
+
+$if(date)$
+\date{$date$}
+$endif$
+% Listas y viñetas:
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+$if(listings)$
+\usepackage{listings}
+$endif$
+% Viñetas enumeras:
+$if(fancy-enums)$
+\makeatletter\AtBeginDocument{%
+  \renewcommand{\@listi}
+    {\setlength{\labelwidth}{4em}}
+}\makeatother
+\usepackage{enumerate}
+$endif$
+
+$if(tables)$
+\usepackage{ctable}
+\usepackage{float} % Provee la opción H flotantes de los elementos
+$endif$
+% Sintaxis resaltada de cófigo
+$if(highlighting-macros)$
+  $highlighting-macros$
+$endif$
+$if(tables)$
+\usepackage{array}
+% This is needed because raggedright in table elements redefines \\:
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\let\PBS=\PreserveBackslash
+$endif$
+$if(links)$
+\usepackage[breaklinks=true]{hyperref}
+$endif$
+$if(url)$
+\usepackage{url}
+$endif$
+$if(graphics)$
+\usepackage{graphicx}
+$endif$
+
+%%%------------------------------------------------------------------------
+%%% Cuerpo del Documento
+%%%------------------------------------------------------------------------
+
+\begin{document}
+  $if(title)$
+  \maketitle
+  $endif$
+
+  $if(alignment)$
+  \begin{$alignment$}
+  $endif$
+
+  $if(abstract)$
+  \begin{abstract}
+  \noindent \emph{Resumen:} $abstract$
+  \end{abstract}
+  $endif$
+
+  $body$
+
+  $if(natbib)$
+  $if(biblio-files)$
+  $if(biblio-title)$
+  $if(book-class)$
+  \renewcommand\bibname{Bibliography}
+  $else$
+  \renewcommand\refname{References}
+  $endif$
+  $endif$
+  \bibliography{$biblio-files$}
+  $endif$
+  $endif$
+
+  $if(biblatex)$
+  \printbibliography$if(biblio-title)$[title=Referencias]$endif$
+  $endif$
+
+  $for(include-after)$
+  $include-after$
+  $endfor$
+
+  $if(alignment)$
+  \end{$alignment$}
+  $endif$
+
+\end{document}
