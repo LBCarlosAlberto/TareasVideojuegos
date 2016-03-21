@@ -25,7 +25,7 @@ Paterno | Apellido paterno iniciando con la primera letra en mayúscula. |
 Materno | Corresponde al apellido materno iniciando con la primera letra en mayúscula. |
 N | Inicial del primer nombre, sí se tiene dos nombre utilizar las iniciales de cada uno en mayúsculas.
 _ | Guión bajo se empla como separación. |
-tarea | Es el nombre de la tarea o unidad solicitada. | 
+tarea | Es el nombre de la tarea o unidad solicitada. |
 
 
 Ejemplo:
@@ -43,6 +43,36 @@ cd plantilla_tareas_md
 ```
 
 Abrir el archivo PaternoMatenoN_tarea.md con tu procesador de textos favorito ([Haroopad](http://pad.haroopress.com), [Atom](https://atom.io), [Emacs](https://www.gnu.org/software/emacs/), [VIM](http://www.vim.org/download.php), [Texmate](https://macromates.com/download), etc.) y modificarlo con tus datos.
+
+## Cómo crear PDF, DOCX, EPUB y HTML
+
+Una vez terminado tu tesis, para crear el archivo PDF utiliza los siguientes pasos según sea el caso. Modifica el archivo Makefile en las variables **TEXMD** y **TAREA** de acuerdo a tu nombre
+
+### Windows, Linux y OSX
+
+#### PDF
+
+```
+make pdf
+```
+
+#### Microsoft Word
+
+```
+make docx
+```
+
+#### ePub
+
+```
+make epub
+```
+
+#### HTML
+
+```
+make html
+```
 
 ## Crear un PDF
 
@@ -69,30 +99,32 @@ Las nuevas fuentes bibliográficas se agregan en *biblio/bibliografia.bib* emple
 ## Requerimientos
 ### Windows
 - Git [http://git-scm.com](http://git-scm.com)
+- GNU Make
+- GNU Awk
 - MiKTeX, [http://miktex.org](http://miktex.org/download)
 - Texmaker, [www.xm1math.net/texmaker/](http://www.xm1math.net/texmaker/download.html)
 - Pandoc, [https://github.com/jgm/pandoc/releases/tag/1.16.0.2](https://github.com/jgm/pandoc/releases/tag/1.16.0.2)
 - Haroopad, [http://pad.haroopress.com/user.html](http://pad.haroopress.com/user.html)
 - Atom, [http://atom.io/](http://atom.io/)
-- Emacs, [https://www.gnu.org/software/emacs/](https://www.gnu.org/software/emacs/)
-- Spacemacs, [http://spacemacs.org](http://spacemacs.org)
+
 
 ### OSX
 - Git [http://git-scm.com](http://git-scm.com)
+- GNU Make (Se debe instalar y descargar desde la línea de comandos)
+- GNU Awk
 - MacTeX, [https://tug.org/mactex/](https://tug.org/mactex/downloading.html)
 - Texmaker, [www.xm1math.net/texmaker/](http://www.xm1math.net/texmaker/download.html)
 - Pandoc, [https://github.com/jgm/pandoc/releases/tag/1.16.0.2](https://github.com/jgm/pandoc/releases/tag/1.16.0.2)
 - Haroopad, [http://pad.haroopress.com/user.html](http://pad.haroopress.com/user.html)
 - Atom, [http://atom.io/](http://atom.io/)
-- Emacs, [https://www.gnu.org/software/emacs/](https://www.gnu.org/software/emacs/)
-- Spacemacs, [http://spacemacs.org](http://spacemacs.org)
+
 
 ### Linux
 - Git [http://git-scm.com](http://git-scm.com)
+- GNU Make
+- GNU Awk
 - Latex, instalar según tu distribución con apt-get, yum, zypper, pacman o tgz.
 - Texmaker, [www.xm1math.net/texmaker/](http://www.xm1math.net/texmaker/download.html)
 - Pandoc, [https://github.com/jgm/pandoc/releases/tag/1.16.0.2](https://github.com/jgm/pandoc/releases/tag/1.16.0.2)
 - Haroopad, [http://pad.haroopress.com/user.html](http://pad.haroopress.com/user.html)
 - Atom, [http://atom.io/](http://atom.io/)
-- Emacs, [https://www.gnu.org/software/emacs/](https://www.gnu.org/software/emacs/)
-- Spacemacs, [http://spacemacs.org](http://spacemacs.org)

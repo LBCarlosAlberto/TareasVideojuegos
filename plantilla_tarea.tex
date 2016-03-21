@@ -5,7 +5,26 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[letterpaper, 12pt, spanish]{article}
 %Paquetes
-\usepackage{helvet} %% Fuente Helvetica
+
+%%%------------------------------------------------------------------------
+%%% Tipografia:
+%%%------------------------------------------------------------------------
+%% Se pueden utilizar la siguientes fuentes Helvetica, Charter, Avante Grade,
+%% Palatino y Verdana
+%% S�lo descomenta o comenta la que te agrade, seg�n sea el caso
+%% Charter
+%\usepackage{charter} %% Charter
+%\renewcommand{\familydefault}{bch}
+%% Palatino
+\usepackage{palatino} %% Palatino
+\renewcommand{\familydefault}{ppl}
+%% Avant Grade
+%\usepackage{avant} %% Avant Grade
+%\renewcommand{\familydefault}{pag}
+%% Helvetica
+%\usepackage{helvet} %% Helvetica
+%\renewcommand{\familydefault}{phv}
+
 \usepackage{cite} %Referenciar citas en biblitex
 \usepackage{apacite}
 \usepackage{hyperref}
@@ -23,8 +42,9 @@
 %% Para matemáticas
 \usepackage{amsmath, amssymb, mathtools}
 %% Parametros para margenes del documento
-\usepackage[right=3cm,left=3cm,top=3cm,bottom=3cm,headsep=0cm,footskip=1cm]{geometry}
-\setlength{\parskip}{\baselineskip} %Espaciado entre cada párrafo
+%%\usepackage[right=3cm,left=3cm,top=3cm,bottom=3cm,headsep=0cm,footskip=1cm]{geometry}
+\usepackage[width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
+%\setlength{\parskip}{\baselineskip} %Espaciado entre cada párrafo
 \renewcommand{\baselinestretch}{1.5} %Espaciado de línea 1.5 puntos
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
