@@ -82,7 +82,7 @@ Una vez terminado el trabajo o tarea el archivo PaternoMaternoN_tarea.md, hay qu
 Desde el CMD
 
 ```cmd
-pandoc -s -S --template plantilla_tarea.tex --filter pandoc-citeproc --csl csl/apa.csl --bibliography biblio/bibliografia.bib -o PaternoMaternoN_tarea.pdf PaternoMaternoN_tarea.md
+pandoc -s -S --template plantilla_tarea.tex --filter pandoc-citeproc --csl estilos/apa.csl --bibliography biblio/bibliografia.bib -o PaternoMaternoN_tarea.pdf PaternoMaternoN_tarea.md
 ```
 
 ### Linux y OSX
