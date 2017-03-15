@@ -3,6 +3,7 @@ TEXMD=PaternoMaternoN_tarea
 TAREA=PaternoMaternoN_tarea
 BASEDIR=$(CURDIR)
 ESTILOSDIR=$(BASEDIR)/estilos
+PLANTILLASDIR=$(BASEDIR)/plantillas
 ## Localización de los archivo soportados por Pandoc
 PREFIX = /Users/lramirez/.pandoc
 
@@ -28,7 +29,10 @@ help:
 	@echo 'o unas genericas desde:https://github.com/jgm/pandoc-templates		  '
 
 pdf:
-	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block --template "$(BASEDIR)"/plantilla_tarea.tex --filter pandoc-citeproc --csl "$(CSL)".csl --bibliography "$(BIB)" -o "$(TAREA)".pdf "$(TEXMD)".md
+	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block --template "$(PLANTILLASDIR)"/plantilla_tarea.tex --filter pandoc-citeproc --csl "$(CSL)".csl -s -S --bibliography "$(BIB)" -o "$(TAREA)".pdf "$(TEXMD)".md
+
+pdf2:
+	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block --latex-engine=pdflatex --template "$(PLANTILLASDIR)"/latex.template --filter pandoc-crossref --filter pandoc-citeproc --filter pandoc-citeproc-preamble --csl "$(CSL)".csl --bibliography "$(BIB)" -o "$(TAREA)".pdf "$(TEXMD)".md
 
 docx:
 	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block -s -S --filter pandoc-citeproc --csl "$(CSL)".csl --bibliography "$(BIB)" --toc --number-sections -o "$(TAREA)".docx "$(TEXMD)".md
