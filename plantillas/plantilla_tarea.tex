@@ -16,14 +16,17 @@
 %\usepackage{charter} %% Charter
 %\renewcommand{\familydefault}{bch}
 %% Palatino
-\usepackage{palatino} %% Palatino
-\renewcommand{\familydefault}{ppl}
+%\usepackage{palatino} %% Palatino
+%\renewcommand{\familydefault}{ppl}
 %% Avant Grade
 %\usepackage{avant} %% Avant Grade
 %\renewcommand{\familydefault}{pag}
 %% Helvetica
 %\usepackage{helvet} %% Helvetica
 %\renewcommand{\familydefault}{phv}
+\usepackage[proportional]{libertine} %% Fuente Libertine Linux
+\usepackage{lettrine}
+\renewcommand{\ttfamily}{\fontencoding{OT1}\fontfamily{cmtt}\selectfont}
 
 \usepackage{cite} %Referenciar citas en biblitex
 \usepackage{apacite}
@@ -32,7 +35,8 @@
 \usepackage[utf8]{inputenc}
 %\usepackage{enumerate}
 %% Esto es para que LaTeX sepa que el texto está en español
-\usepackage[spanish,activeacute]{babel}
+\usepackage[spanish,activeacute, es-tabla]{babel}
+\usepackage[spanish]{babelbib}
 %% Citas
 \usepackage{upquote}
 \usepackage{microtype}
