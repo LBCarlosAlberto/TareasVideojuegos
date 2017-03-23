@@ -4,6 +4,7 @@ author: Nombre Paterno Materno
 date:
 abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula porta diam et volutpat.
 bibliography: biblio/bibliografia.bib
+csl: estilos/apa.csl
 ...
 
 
