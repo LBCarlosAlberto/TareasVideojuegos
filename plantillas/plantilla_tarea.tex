@@ -74,16 +74,39 @@ $header-includes$
 $endfor$
 
 $if(title)$
-\title{$title$}
-$endif$
+\title{\bigskip \bigskip $title$$if(thanks)$\thanks{$thanks$} $endif$ }
+$endif$ 
 
-$if(author)$
-\author{$for(author)$$author$$sep$ \and $endfor$}
-$endif$
+%\author{$for(author)$$author$$sep$\\$endfor$}
+
+\author{$for(author)$\large $author.name$\vspace{0.05in} \newline\normalsize\emph{$author.affiliation$} \newline\footnotesize \url{$author.email$}\vspace*{0.2in}\newline $sep$ \and $endfor$}
+
+%\author{$for(author)$$author.name$ ($author.affiliation$)$sep$ \and $endfor$}
 
 $if(date)$
 \date{$date$}
 $endif$
+
+% Remove the author and date fields and the space associated with them
+% from the definition of maketitle!
+\makeatletter
+
+\renewcommand{\@maketitle}{
+\newpage
+ \null
+ %\vskip 3em%
+ \begin{flushleft}
+ {\footnotesize \@date}%
+ \end{flushleft}
+ %{\footnotesize \@date \par}%
+ \vskip 3em%
+ \begin{center}%
+  {\LARGE \@title \par}%
+ \end{center}%
+ \vskip .5em%
+ {\@author \par}%
+ \par} \makeatother
+
 % Listas y viñetas:
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}

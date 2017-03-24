@@ -1,6 +1,9 @@
 ---
-title: Título de la tarea
-author: Nombre Paterno Materno
+title: Título de la tarea a entregar
+author:
+- name: Nombre Paterno Materno
+  affiliation: Facultad de Contaduría y Administración, UNAM
+  email: tucorreo@comunidad.unam.mx
 date:
 abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula porta diam et volutpat.
 bibliography: biblio/bibliografia.bib
@@ -71,7 +74,7 @@ Día | Ingresos | Egresos
 1 | $25,000 | $50
 2 | $200 | $320
 3 | $5 | $50,000
-: Otro formato de tabla Ingresos y egresos. \label{ref_a_table}
+Table: Otro formato de tabla Ingresos y egresos. \label{ref_a_table}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula porta diam et volutpat. Nam mattis facilisis pulvinar. Donec consectetur pulvinar ullamcorper. Aenean ac eleifend dolor. Sed imperdiet enim id ligula tempor, eget hendrerit ex commodo. Etiam dapibus fermentum rutrum. 
 
