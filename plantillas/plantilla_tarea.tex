@@ -4,7 +4,7 @@
 %%% La vesión más reciente en https://github.com/opengraphix/plantilla_tareas_LATEX
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[letterpaper, 12pt, spanish]{article}
-\usepackage{multirow,booktabs,setspace,caption, subcaption}
+\usepackage{multirow,booktabs,setspace,caption,subcaption}
 
 %Paquetes
 
@@ -48,10 +48,18 @@
 %% Para matemáticas
 \usepackage{amsmath, amssymb, mathtools}
 %% Parametros para margenes del documento
-\usepackage[width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
+\usepackage[top=1.5in,bottom=1.5in,left=1.5in,right=1.4in]{geometry}
+%%\setlength\parindent{0.4in} % indent at start of paragraphs (set to 0.3?)
+\setlength{\parskip}{9pt}
+%\usepackage[width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
+%\setlength\parindent{0.4in} % indent at start of paragraphs (set to 0.3?)
+%\setlength{\parskip}{9pt}
 \renewcommand{\baselinestretch}{1.5} %Espaciado de línea 1.5 puntos
 \usepackage[T1]{fontenc}
-%\usepackage{lmodern}
+
+$if(geometry)$
+\usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
+$endif$
 
 $if(numbersections)$
 $else$
@@ -111,9 +119,28 @@ $endif$
 $if(url)$
 \usepackage{url}
 $endif$
+%% Uso de imágenes y graficos
 $if(graphics)$
 \usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 $endif$
+
+%%%------------------------------------------------------------------------
+%%% Registro de versiones con Git
+%%%------------------------------------------------------------------------
+
+%% Si no quieres usar git o el paquete vc (desde CTAN), comenta la línea correspondientes.
+%% Si comentas, debes estar seguro de comentar toda la sección
+\immediate\write18{sh ./vc.sh}
+\input{vc}
+
 
 %%%------------------------------------------------------------------------
 %%% Tablas
