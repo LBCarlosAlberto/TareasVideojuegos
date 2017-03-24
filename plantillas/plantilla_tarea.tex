@@ -4,6 +4,8 @@
 %%% La vesión más reciente en https://github.com/opengraphix/plantilla_tareas_LATEX
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[letterpaper, 12pt, spanish]{article}
+\usepackage{multirow,booktabs,setspace,caption, subcaption}
+
 %Paquetes
 
 %%%------------------------------------------------------------------------
@@ -46,9 +48,7 @@
 %% Para matemáticas
 \usepackage{amsmath, amssymb, mathtools}
 %% Parametros para margenes del documento
-%%\usepackage[right=3cm,left=3cm,top=3cm,bottom=3cm,headsep=0cm,footskip=1cm]{geometry}
 \usepackage[width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
-%\setlength{\parskip}{\baselineskip} %Espaciado entre cada párrafo
 \renewcommand{\baselinestretch}{1.5} %Espaciado de línea 1.5 puntos
 \usepackage[T1]{fontenc}
 %\usepackage{lmodern}
@@ -115,6 +115,23 @@ $if(graphics)$
 \usepackage{graphicx}
 $endif$
 
+%%%------------------------------------------------------------------------
+%%% Tablas
+%%%------------------------------------------------------------------------
+\usepackage{threeparttable}
+\usepackage{array}
+\newcolumntype{x}[1]{%
+>{\centering\arraybackslash}m{#1}}%
+
+%%%------------------------------------------------------------------------
+%%% Tablas e imagenes estilo APA
+%%% referencia: https://tex.stackexchange.com/questions/254254/how-to-set-figures-and-tables-captions-in-apa-style-without-using-apa6-class
+%%%------------------------------------------------------------------------
+\DeclareCaptionLabelSeparator*{spaced}{\\[2ex]}
+\captionsetup[table]{textfont=it,format=plain,justification=justified,
+  singlelinecheck=false,labelsep=spaced,skip=0pt}
+\captionsetup[figure]{labelsep=period,labelfont=it,justification=justified,
+  singlelinecheck=false,font=doublespacing}
 %%%------------------------------------------------------------------------
 %%% Cuerpo del Documento
 %%%------------------------------------------------------------------------
