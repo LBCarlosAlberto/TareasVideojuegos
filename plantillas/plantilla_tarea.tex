@@ -3,7 +3,7 @@
 %%% Luis O. Ramírez Fernández < lramirez88mx@comunidad.unam.mx>
 %%% La vesión más reciente en https://github.com/opengraphix/plantilla_tareas_LATEX
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[letterpaper, 12pt, spanish]{article}
+\documentclass[letterpaper, 11pt, spanish,oneside]{article}
 \usepackage{multirow,booktabs,setspace,caption,subcaption}
 
 %Paquetes
@@ -98,8 +98,7 @@ $endif$
  \begin{flushleft}
  {\footnotesize \@date}%
  \end{flushleft}
- %{\footnotesize \@date \par}%
- \vskip 3em%
+ \vskip 2em%
  \begin{center}%
   {\LARGE \@title \par}%
  \end{center}%
@@ -197,7 +196,9 @@ $endif$
 
   $if(abstract)$
   \begin{abstract}
-  \noindent \emph{Resumen:} $abstract$
+  \normalfont\scriptsize
+  \noindent \emph{Resumen:}
+  $abstract$
   \end{abstract}
   $endif$
 

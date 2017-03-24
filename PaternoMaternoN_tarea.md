@@ -86,6 +86,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula porta
   \texttt{\footnotesize revisión: \VCRevision\ el \VCDateTEX}
 \end{flushright}
 
+\newpage
+
 # Referencias {.unnumbered}
 \setlength{\parindent}{-0.2in}
 \setlength{\leftskip}{0.2in}
