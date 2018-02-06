@@ -43,16 +43,3 @@ Así, mientras el Congreso de la Unión debate una iniciativa que busca regular 
 **2.- ** (http://noticias.universia.net.mx/ciencia-nn-tt/noticia/2005/06/20/92951/lista-empresas-mexicanas-desarrolladoras-videojuegos.html)
 
 **3.- ** (https://www.forbes.com.mx/videojuegos-mexico-mercado-mas-22000-mdp/)
-
-\begin{flushright}
-  \texttt{\footnotesize revisión: \VCRevision\ el \VCDateTEX}
-\end{flushright}
-
-\newpage
-
-# Referencias {.unnumbered}
-\setlength{\parindent}{-0.2in}
-\setlength{\leftskip}{0.2in}
-\setlength{\parskip}{8pt}
-\vspace*{-0.2in}
-\noindent
