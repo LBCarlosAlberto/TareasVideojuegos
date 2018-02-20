@@ -38,9 +38,9 @@ Hemos conseguido que en los videojuegos se cree un movimiento programado, pero, 
 
 # Fuentes
 
-** + ** David Javier Morán Márquez y Francisco Javier Romero Paris.. (2013). FUNCIONES QUE GANAN PARTIDAS. 20/02/18, de Universidad de Alcalá Sitio web: (http://www3.uah.es/libretics/concurso2013/files2013/Trabajos/Funciones%20que%20ganan%20partidas.pdf)
+* +David Javier Morán Márquez y Francisco Javier Romero Paris.. (2013). FUNCIONES QUE GANAN PARTIDAS. 20/02/18, de Universidad de Alcalá Sitio web: (http://www3.uah.es/libretics/concurso2013/files2013/Trabajos/Funciones%20que%20ganan%20partidas.pdf)*
 
-** + ** Comunidad EcuRed. (2016). Algoritmo de Dijkstra. 20/02/18, de EcuRed Sitio web: (https://www.ecured.cu/Algoritmo_de_Dijkstra)
+* +  Comunidad EcuRed. (2016). Algoritmo de Dijkstra. 20/02/18, de EcuRed Sitio web: (https://www.ecured.cu/Algoritmo_de_Dijkstra)*
 
-** + ** Jhosimar George Arias Figueroa. (2012). CAMINO MAS CORTO: ALGORITMO DE DIJKSTRA. 20/02/18, de Algorithms and More Sitio web: (https://jariasf.wordpress.com/2012/03/19/camino-mas-corto-algoritmo-de-dijkstra/)
+* +  Jhosimar George Arias Figueroa. (2012). CAMINO MAS CORTO: ALGORITMO DE DIJKSTRA. 20/02/18, de Algorithms and More Sitio web: (https://jariasf.wordpress.com/2012/03/19/camino-mas-corto-algoritmo-de-dijkstra/)*
 
